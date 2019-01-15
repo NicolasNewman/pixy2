@@ -29,7 +29,7 @@ mkdir $TARGET_BUILD_FOLDER/python_demos
 cd ../src/host/libpixyusb2_examples/python_demos
 
 swig -c++ -python pixy.i
-python setup.py build_ext --inplace -D__LINUX__
+python3 setup.py build_ext --inplace -D__LINUX__
 
 if [ -f ../../../../build/python_demos/_pixy.so ]; then
   rm ../../../../build/python_demos/_pixy.so
@@ -37,7 +37,7 @@ fi
 
 cp * ../../../../build/python_demos
 
-if [ -f ../../../../build/python_demos/_pixy.so ]; then
+if [ -f ../../../../build/python_demos/_pixy.cpython-36m-x86_64-linux-gnu.so ]; then
   GREEN_TEXT
   printf "SUCCESS "
 else
