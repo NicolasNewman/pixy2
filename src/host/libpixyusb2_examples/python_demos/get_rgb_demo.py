@@ -15,6 +15,6 @@ Frame = 1
 
 while 1:
   RGB = video_get_RGB (X, Y)
-  print 'Frame %d RGB: ' % (Frame)
-  print RGB
+  print('Frame %d RGB: ' % (Frame))
+  print(RGB)
   Frame = Frame + 1

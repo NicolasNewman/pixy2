@@ -34,9 +34,9 @@ while 1:
   v_count = line_get_vectors (100, vectors)
 
   if i_count > 0 or v_count > 0:
-    print 'frame %3d:' % (frame)
+    print('frame %3d:' % (frame))
     frame = frame + 1
     for index in range (0, i_count):
-      print '[INTERSECTION: INDEX=%d ANGLE=%d]' % (intersections[index].m_index, intersections[index].m_angle)
+      print('[INTERSECTION: INDEX=%d ANGLE=%d]' % (intersections[index].m_index, intersections[index].m_angle))
     for index in range (0, v_count):
-      print '[VECTOR: INDEX=%d X0=%3d Y0=%3d X1=%3d Y1=%3d]' % (vectors[index].m_index, vectors[index].m_x0, vectors[index].m_y0, vectors[index].m_x1, vectors[index].m_y1)
+      print('[VECTOR: INDEX=%d X0=%3d Y0=%3d X1=%3d Y1=%3d]' % (vectors[index].m_index, vectors[index].m_x0, vectors[index].m_y0, vectors[index].m_x1, vectors[index].m_y1))

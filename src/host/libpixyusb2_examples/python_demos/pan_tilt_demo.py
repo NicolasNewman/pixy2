@@ -22,7 +22,7 @@ def Reset ():
   Locked_Block_Index = 0
 
 def Display_Block (Index, Block):
-        print '                   Block[%3d]: I: %3d / S:%2d / X:%3d / Y:%3d / W:%3d / H:%3d / A:%3d' % (Index, Block.m_index, Block.m_signature, Block.m_x, Block.m_y, Block.m_width, Block.m_height, Block.m_age)
+        print('                   Block[%3d]: I: %3d / S:%2d / X:%3d / Y:%3d / W:%3d / H:%3d / A:%3d' % (Index, Block.m_index, Block.m_signature, Block.m_x, Block.m_y, Block.m_width, Block.m_height, Block.m_age))
 
 class PID_Controller:
   def __init__ (self, Proportion_Gain, Integral_Gain, Derivative_Gain, Servo):
@@ -102,7 +102,7 @@ while 1:
       # Find the block that we are locked to #
       for Index in range (0, Count):
         if Blocks[Index].m_index == Locked_Block_Index:
-          print 'Frame %3d: Locked' % (Frame)
+          print('Frame %3d: Locked' % (Frame))
           Display_Block (Index, Blocks[Index])
 
           Pan_Offset  = (pixy.get_frame_width () / 2) - Blocks[Index].m_x;
@@ -113,7 +113,7 @@ while 1:
 
           pixy.set_servos (Pan_PID_Controller.Command, Tilt_PID_Controller.Command)
     else:
-      print 'Frame %3d:' % (Frame)
+      print('Frame %3d:' % (Frame))
 
       # Display all the blocks in the frame #
       for Index in range (0, Count):
