@@ -37,7 +37,7 @@ fi
 
 cp * ../../../../build/python_demos
 
-if [ -f ../../../../build/python_demos/_pixy.cpython-36m-x86_64-linux-gnu.so ]; then
+if [ -f ../../../../build/python_demos/_pixy.*.so ]; then
   GREEN_TEXT
   printf "SUCCESS "
 else
